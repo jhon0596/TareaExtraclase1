@@ -10,7 +10,7 @@ class LocalServer : public QLocalServer
     Q_OBJECT
 public:
     explicit LocalServer(QObject *parent = nullptr);
-
+    void enviar(const QString &msj);
 private:
     QLocalSocket *mSocket;
 

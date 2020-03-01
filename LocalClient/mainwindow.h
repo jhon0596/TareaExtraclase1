@@ -6,9 +6,7 @@
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
-
-class LocalServer;
-
+class QLocalSocket;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -18,14 +16,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_botonIniciar_clicked();
+    void on_conectar_clicked();
 
-    void on_botonSalir_clicked();
 
-    void on_botonEnviar_clicked();
+
+    void on_quitar_clicked();
 
 private:
     Ui::MainWindow *ui;
-    LocalServer *mLocalServer;
+    QLocalSocket *mSocket;
 };
 #endif // MAINWINDOW_H
