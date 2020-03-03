@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>352</width>
-    <height>166</height>
+    <width>408</width>
+    <height>232</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,56 +17,96 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>283</width>
-      <height>62</height>
+      <x>60</x>
+      <y>140</y>
+      <width>281</width>
+      <height>60</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Mensaje</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="mensaje"/>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="botonIniciar">
+       <property name="text">
+        <string>Iniciar</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QPushButton" name="botonIniciar">
-         <property name="text">
-          <string>Iniciar</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="botonEnviar">
-         <property name="text">
-          <string>Enviar</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="botonSalir">
-         <property name="text">
-          <string>Salir</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="botonEnviar">
+       <property name="text">
+        <string>Enviar</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="botonSalir">
+       <property name="text">
+        <string>Salir</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>60</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nodo Inicial</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>60</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nodo Final</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditNI">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditNF">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>90</y>
+      <width>113</width>
+      <height>25</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Grafo de 5 nodos</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

@@ -7,6 +7,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 class QLocalSocket;
+class algDijkstra;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -14,6 +15,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    int inicio;
+    int final;
+    QString ruta;
 
 private slots:
     void on_conectar_clicked();
@@ -25,5 +29,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QLocalSocket *mSocket;
+    algDijkstra * dijkstra;
 };
 #endif // MAINWINDOW_H

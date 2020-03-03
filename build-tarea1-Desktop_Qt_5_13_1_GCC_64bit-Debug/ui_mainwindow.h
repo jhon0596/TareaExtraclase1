@@ -16,8 +16,6 @@
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,46 +25,29 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QWidget *widget;
-    QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout;
-    QLabel *label;
-    QLineEdit *mensaje;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *botonIniciar;
     QPushButton *botonEnviar;
     QPushButton *botonSalir;
-    QStatusBar *statusbar;
+    QLabel *label;
+    QLabel *label_2;
+    QLineEdit *lineEditNI;
+    QLineEdit *lineEditNF;
+    QLabel *label_3;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(352, 166);
+        MainWindow->resize(408, 232);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new QWidget(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(40, 40, 283, 62));
-        verticalLayout = new QVBoxLayout(widget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(widget);
-        label->setObjectName(QString::fromUtf8("label"));
-
-        horizontalLayout->addWidget(label);
-
-        mensaje = new QLineEdit(widget);
-        mensaje->setObjectName(QString::fromUtf8("mensaje"));
-
-        horizontalLayout->addWidget(mensaje);
-
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
+        widget->setGeometry(QRect(60, 140, 281, 60));
+        horizontalLayout_2 = new QHBoxLayout(widget);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         botonIniciar = new QPushButton(widget);
         botonIniciar->setObjectName(QString::fromUtf8("botonIniciar"));
 
@@ -82,13 +63,22 @@ public:
 
         horizontalLayout_2->addWidget(botonSalir);
 
-
-        verticalLayout->addLayout(horizontalLayout_2);
-
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(50, 60, 101, 17));
+        label_2 = new QLabel(centralwidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setGeometry(QRect(250, 60, 91, 17));
+        lineEditNI = new QLineEdit(centralwidget);
+        lineEditNI->setObjectName(QString::fromUtf8("lineEditNI"));
+        lineEditNI->setGeometry(QRect(50, 90, 113, 25));
+        lineEditNF = new QLineEdit(centralwidget);
+        lineEditNF->setObjectName(QString::fromUtf8("lineEditNF"));
+        lineEditNF->setGeometry(QRect(240, 90, 113, 25));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(140, 10, 121, 17));
         MainWindow->setCentralWidget(centralwidget);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName(QString::fromUtf8("statusbar"));
-        MainWindow->setStatusBar(statusbar);
 
         retranslateUi(MainWindow);
 
@@ -98,10 +88,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Mensaje", nullptr));
         botonIniciar->setText(QCoreApplication::translate("MainWindow", "Iniciar", nullptr));
         botonEnviar->setText(QCoreApplication::translate("MainWindow", "Enviar", nullptr));
         botonSalir->setText(QCoreApplication::translate("MainWindow", "Salir", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Nodo Inicial", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "Nodo Final", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Grafo de 5 nodos", nullptr));
     } // retranslateUi
 
 };

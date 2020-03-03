@@ -14,29 +14,18 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>264</width>
-      <height>260</height>
+      <y>39</y>
+      <width>261</width>
+      <height>231</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Servidor:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="servidor"/>
-       </item>
-      </layout>
+      <layout class="QHBoxLayout" name="horizontalLayout"/>
      </item>
      <item row="2" column="0">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -60,6 +49,19 @@
       <widget class="QListWidget" name="listWidget"/>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rutas Posibles</string>
+    </property>
    </widget>
   </widget>
  </widget>
